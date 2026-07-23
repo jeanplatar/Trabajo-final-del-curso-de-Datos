@@ -1,0 +1,11 @@
+Año_de_trabajo:	El año en que se pagó el salario.
+nivel_de_experiencia:	Nivel de experiencia en el puesto durante el año con los siguientes valores posibles: EN Nivel de entrada / Junior MI Nivel medio / Intermedio SE Nivel sénior / Experto EX Nivel ejecutivo / Director
+tipo_de_empleo:	Tipo de empleo para el puesto: PT Tiempo parcial FT Tiempo completo CT Contrato FL Freelance
+título profesional:	El puesto que desempeñé durante el año.
+salario:	El importe total del salario bruto pagado.
+moneda_del_salario:	La moneda del salario pagado como código de moneda ISO 4217.
+salario_en_USD:	El salario en USD (tipo de cambio dividido por el tipo de cambio promedio del USD para el año correspondiente a través de fxdata.foorilla.com).
+residencia del empleado:	País de residencia principal del empleado durante el año laboral según el código de país ISO 3166.
+relación_remota:	La cantidad total de trabajo realizado de forma remota, con los siguientes valores posibles: 0 Sin trabajo remoto (menos del 20%) 50 Parcialmente remoto 100 Totalmente remoto (más del 80%)
+ubicación_de_la_empresa:	El país de la oficina principal o sucursal subcontratada del empleador, según el código de país ISO 3166.
+tamaño_de_la_empresa:	Número promedio de personas que trabajaron para la empresa durante el año: S menos de 50 empleados (pequeña) M de 50 a 250 empleados (mediana) L más de 250 empleados (grande)
