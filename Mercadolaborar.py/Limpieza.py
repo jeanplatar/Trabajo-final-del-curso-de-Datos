@@ -38,19 +38,21 @@ dtype: int64
 Duplicados"""
 # NO se encontraron registros Duplicados 
 
-dataframe.rename(columns={
+spanishDataframe=dataframe.rename(columns={
     "wor_year":"Año_de_trabajo",
-    "experience_level ":"nivel_de_experiencia",
+    "experience_level":"nivel_de_experiencia",
     "employment_type":"tipo_de_empleo",
-    "job_title ":"título profesional",
-    "salary ":"salario",
-    "salary_currency  ":"moneda_del_salario",
-    "salary_in_usd ":"salario_en_USD",
-    "employee_residence  ":"residencia del empleado",
-    "remote_ratio  ":"relación_remota",
-    "company_location ": "ubicación_de_la_empresa",
-    "company_size " : "tamaño_de_la_empresa"
-}, inplace=True)
+    "job_title":"título profesional",
+    "salary":"salario",
+    "salary_currency":"moneda_del_salario",
+    "salary_in_usd":"salario_en_USD",
+    "employee_residence":"residencia del empleado",
+    "remote_ratio":"relación_remota",
+    "company_location": "ubicación_de_la_empresa",
+    "company_size" : "tamaño_de_la_empresa"
+})
+
+print(spanishDataframe.columns)
 
 print(dataframe.head())
 """   Unnamed: 0  work_year  ... company_location company_size
