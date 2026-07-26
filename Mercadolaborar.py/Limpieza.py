@@ -69,6 +69,13 @@ print(dataframe.tail())
 606         606       2022  ...               US            L
 
 [5 rows x 12 columns]"""
+
+print("-----------------------------------------------------")
+
 print(dataframe.info())
+
+
+print("---------------------------------------------------------" )
+
 
 print(dataframe.describe())
