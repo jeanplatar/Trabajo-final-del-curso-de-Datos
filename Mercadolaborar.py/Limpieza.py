@@ -153,3 +153,83 @@ None"""
 
 
 print(dataframe.info())
+
+print("-------------------------------------")
+print(dataframe.salary)
+"""0       70000
+1      260000
+2       85000
+3       20000
+4      150000
+        ...  
+602    154000
+603    126000
+604    129000
+605    150000
+606    200000
+Name: salary, Length: 607, dtype: int64"""
+
+print("------------------------------")
+
+print(dataframe.salary_currency)
+"""0      EUR
+1      USD
+2      GBP
+3      USD
+4      USD
+      ... 
+602    USD
+603    USD
+604    USD
+605    USD
+606    USD
+Name: salary_currency, Length: 607, dtype: str"""
+
+print("------------------------------------")
+
+print(dataframe.salary_in_usd)
+"""0       79833
+1      260000
+2      109024
+3       20000
+4      150000
+        ...  
+602    154000
+603    126000
+604    129000
+605    150000
+606    200000
+"""
+print("----------------------")
+
+
+columnas_texto = dataframe.select_dtypes(include=["object"] ).columns
+
+for columna in columnas_texto:
+    vacios=(dataframe[columna].str.strip()=="").sum()
+
+    print(f"{columna}:{vacios} valores vacios")
+"""experience_level:0 valores vacios
+tipo_de_empleo:0 valores vacios
+job_title:0 valores vacios
+salary_currency:0 valores vacios
+employee_residence:0 valores vacios
+company_location:0 valores vacios
+company_size:0 valores vacios"""
+
+print("------------------------------------")
+
+print("\nvalores unicos por columna\n")
+
+for columna in columnas_texto:
+    print(f"{columna}:{dataframe[columna].nunique()}valores unicos")
+
+    """valores unicos por columna
+
+experience_level:4valores unicos
+tipo_de_empleo:4valores unicos
+job_title:50valores unicos
+salary_currency:17valores unicos
+employee_residence:57valores unicos
+company_location:50valores unicos
+company_size:3valores unicos"""
