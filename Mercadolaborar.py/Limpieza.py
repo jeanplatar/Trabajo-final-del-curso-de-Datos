@@ -235,3 +235,56 @@ salary_currency:17valores unicos
 employee_residence:57valores unicos
 company_location:50valores unicos
 company_size:3valores unicos"""
+
+print("creacion de columna")
+
+print(dataframe["salary_in_usd"])
+
+print("-------------------------")
+
+print(dataframe["salary_in_usd"].sum())
+
+print("----------salario maximo-------------")
+
+print(dataframe["salary_in_usd"].max())
+
+print("---------salario minimo---------")
+
+print(dataframe["salary_in_usd"].min())
+
+print("-------salario medio------")
+
+print(dataframe["salary_in_usd"].mean())
+
+
+rangos= [0,50000,100000,150000,200000, float("inf")]
+
+etiquetas= ["Bajo","Medio", "Medio-Alto","Alto","Muy Alto"]
+
+dataframe["Rango_Salarial"]=pd.cut(dataframe["salary_in_usd"],bins=rangos, labels=etiquetas)
+print(dataframe[["salary_in_usd","Rango_Salarial"]].head)
+
+"""<bound method NDFrame.head of      salary_in_usd Rango_Salarial
+0            79833          Medio
+1           260000       Muy Alto
+2           109024     Medio-Alto
+3            20000           Bajo
+4           150000     Medio-Alto
+..             ...            ...
+602         154000           Alto
+603         126000     Medio-Alto
+604         129000     Medio-Alto
+605         150000     Medio-Alto
+606         200000           Alto
+
+[607 rows x 2 columns]>"""
+
+print("------experiencia_simplificada----")
+
+dataframe["Experiencia_Simplificada"]= dataframe["experience_level"].map({
+    "EN":"Inicial",
+    "MI":"Junior",
+    "SE":"Senior",
+    "EX":"Ejecutivo"
+})
+dataframe.to_csv("ds_salaries_mejorado.csv")
