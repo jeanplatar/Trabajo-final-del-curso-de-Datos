@@ -287,4 +287,4 @@ dataframe["Experiencia_Simplificada"]= dataframe["experience_level"].map({
     "SE":"Senior",
     "EX":"Ejecutivo"
 })
-dataframe.to_csv("ds_salaries_mejorado.csv")
+dataframe.to_csv("ds_salaries_mejorado.csv",index=False)
